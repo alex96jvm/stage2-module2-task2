@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/login.jsp");
         }
         else {
-            request.getRequestDispatcher("/user/hello.jsp").forward(request, response);
+            response.sendRedirect(request.getContextPath() + "/user/hello.jsp");
         }
     }
 
