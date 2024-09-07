@@ -10,7 +10,7 @@ import java.io.IOException;
 @WebServlet("/logout")
 public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        HttpSession session = request.getSession(false);
+        HttpSession session = request.getSession();
 
         session.removeAttribute("user");
         session.invalidate();
